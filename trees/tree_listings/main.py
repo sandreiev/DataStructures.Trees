@@ -1,7 +1,5 @@
-import preorder_listing
-import inorder_listing
-import postorder_listing
 from tree_node import TreeNode
+from tree import Tree
 
 one = TreeNode('1')
 two = TreeNode('2')
@@ -14,12 +12,12 @@ eight = TreeNode('8')
 nine = TreeNode('9')
 ten = TreeNode('10')
 
-tree = {
+tree = Tree({
     one: [two,three,four], 
     two: None, three: [five,six], four: [seven], 
     five: [eight,nine], six: [ten], seven: None, 
     eight: None, nine: None, ten: None
-}
+})
 
 root = TreeNode(1,'*')
 firstSum = TreeNode(2,'+')
@@ -30,19 +28,19 @@ a2 = TreeNode(6, 'a')
 c = TreeNode(7, 'c')
 
 #(a+b) * (a+c)
-tree = {
+tree = Tree({
     root: [firstSum, secondSum],
     firstSum: [a1, b],
     secondSum: [a2, c]
-}
+})
 
 print(tree)
 
-result = preorder_listing.performListing(tree)
+result = tree.preorder_listing()
 print('preorder: ', ' '.join(result))
 
-result = inorder_listing.performListing(tree)
+result = tree.inorder_listing()
 print('inorder:  ', ' '.join(result))
 
-result = postorder_listing.performListing(tree)
+result = tree.postorder_listing()
 print('postorder:', ' '.join(result))
