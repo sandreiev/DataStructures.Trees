@@ -1,2 +1,2 @@
 # DataStructures.Trees
-Familiarize with tree data structure
+Familiarize yourself with the `Tree` data structure
