@@ -39,13 +39,10 @@ tree = {
 print(tree)
 
 result = preorder_listing.performListing(tree)
-
 print('preorder: ', ' '.join(result))
 
 result = inorder_listing.performListing(tree)
-
 print('inorder:  ', ' '.join(result))
 
 result = postorder_listing.performListing(tree)
-
 print('postorder:', ' '.join(result))
